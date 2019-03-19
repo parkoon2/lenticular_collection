@@ -5,6 +5,9 @@
   "repository": "http://www.knowledgepoint.co.kr:3000/parkoon/node_rest_api_boilerplate.git",
   "author": "parkoon <par_koon@naver.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon src"
+  },
   "dependencies": {
     "express": "^4.16.4"
   },
