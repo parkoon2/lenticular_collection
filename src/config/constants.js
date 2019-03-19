@@ -2,9 +2,13 @@ const defaultConfig = {
   PORT: process.env.PORT || 3000,
 };
 
-const devConfig = {};
+const devConfig = {
+  MONGO_URL: 'mongodb://localhost/parkoon-dev',
+};
 
-const prodConfig = {};
+const prodConfig = {
+  MONGO_URL: 'mongodb://localhost/parkoon-prod',
+};
 
 function envHandler(env) {
   switch (env) {
