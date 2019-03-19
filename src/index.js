@@ -4,6 +4,8 @@ import constants from 'Config/constants';
 import middleware from 'Config/middleware';
 import database from 'Config/database';
 import apiRoutes from 'Modules';
+import { checkToken } from 'Modules/auth/auth.token';
+import { runInNewContext } from 'vm';
 
 const app = express();
 const server = http.createServer(app);
