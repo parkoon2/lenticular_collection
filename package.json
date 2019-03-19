@@ -7,18 +7,23 @@
   "license": "MIT",
   "scripts": {
     "start": " nodemon dist/index.bundle.js",
-    "watch": "NODE_ENV=development webpack -w",
-    "pack": "NODE_ENV=development webpack --config webpack.config.js --mode development",
-    "pack-p": "NODE_ENV=production webpack --config webpack.config.js --mode production"
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "pack": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode development",
+    "pack-p": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode production"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
