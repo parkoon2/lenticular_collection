@@ -21,5 +21,13 @@ module.exports = (env, { mode = 'development' }) => {
         },
       ],
     },
+
+    resolve: {
+      alias: {
+        Utilities: path.resolve(__dirname, 'src/utils/'),
+        Config: path.resolve(__dirname, 'src/config/'),
+        Modules: path.resolve(__dirname, 'src/modules/'),
+      },
+    },
   };
 };
