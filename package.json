@@ -1,0 +1,8 @@
+{
+  "name": "node_rest_api_boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "http://www.knowledgepoint.co.kr:3000/parkoon/node_rest_api_boilerplate.git",
+  "author": "parkoon <par_koon@naver.com>",
+  "license": "MIT"
+}
