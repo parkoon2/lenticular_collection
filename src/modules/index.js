@@ -1,5 +1,5 @@
-import postRoutes from 'Modules/post/post.routes';
+import memberRoutes from 'Modules/member/member.routes';
 
 export default app => {
-  app.use('/api/v1/post', postRoutes);
+  app.use('/api/v1/member', memberRoutes);
 };
