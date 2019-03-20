@@ -5,10 +5,24 @@ const defaultConfig = {
 
 const devConfig = {
   MONGO_URL: 'mongodb://localhost/parkoon-dev',
+  DB: {
+    user: 'me',
+    host: 'localhost',
+    database: 'api',
+    password: 'password',
+    port: 5432,
+  },
 };
 
 const prodConfig = {
   MONGO_URL: 'mongodb://localhost/parkoon-prod',
+  DB: {
+    user: 'me',
+    host: 'localhost',
+    database: 'api',
+    password: 'password',
+    port: 5432,
+  },
 };
 
 function envHandler(env) {
