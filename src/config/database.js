@@ -1,7 +1,7 @@
 /** DB 세팅 */
 import { Pool } from 'pg';
 import constants from 'Config/constants';
-const pool = new Pool(constants.DB);
+const pool = new Pool(constants.PG);
 
 export default {
   query(text, params) {
