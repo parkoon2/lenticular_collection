@@ -19,7 +19,7 @@
 * utils (공통 모듈 - ex) logger...)
 
 ### 파일 구조
-- 최상위
+##### [최상위]
 * babelrc (바벨 설정)
 * editorconfig (vs code editor 설정)
 * gitignore (git)
@@ -27,16 +27,16 @@
 * package.json (패키지 관련)
 * webpack.config.js (webpack 4 설정)
 
-- src
+##### [src]
 * index.js (entry point, 서버 구동파일)
 
-- config
+##### [config]
 * auth.js (토큰관련 인증처리)
 * constants.js (환경설정- port, db ...)
 * database.js (데이터베이스 세팅)
 * middleware.js (미들웨어)
 
-- modules
+##### [modules]
 * index.js (API Router entry point)
 * OOO.controller.js (라우트 컨트롤러)
 * OOO.route.js (라우팅)
