@@ -1,13 +1,13 @@
 import db from 'Config/database';
 
-// export function findAllMembers() {
-//   return new Promise((resolve, reject) => {
-//     db.query('select id from wgcp.member')
-//       .then(result => {
-//         console.log(result);
-//       })
-//       .catch(err => {
-//         reject(err);
-//       });
-//   });
-// }
+export function findAllMembersId() {
+  return new Promise((resolve, reject) => {
+    db.query('select id from wgcp.member')
+      .then(result => {
+        resolve(result['rows']);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+}

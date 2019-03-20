@@ -1,7 +1,7 @@
-// import * as postService from './member.service';
+import * as postService from './member.service';
 
 export async function list(req, res) {
-  // const members = await postService.findAllMembers();
+  const members = await postService.findAllMembersId();
 
-  res.send('post list api working');
+  res.json(members);
 }
