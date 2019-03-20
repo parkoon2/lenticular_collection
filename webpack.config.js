@@ -1,16 +1,20 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, { mode = 'development' }) => {
   return {
     target: 'node',
     entry: {
-      index: './src/index.js',
+      collection: './src/server.js',
     },
     output: {
       path: path.join(__dirname, 'dist'),
       filename: '[name].bundle.js',
       libraryTarget: 'commonjs2',
+    },
+    node: {
+      __dirname: false,
     },
     mode,
     module: {
@@ -20,6 +24,10 @@ module.exports = (env, { mode = 'development' }) => {
           exclude: /node_modules/,
           use: 'babel-loader',
         },
+        // {
+        //   test: /\.html$/,
+        //   use: [{ loader: 'html-loader' }],
+        // },
       ],
     },
 
@@ -31,6 +39,13 @@ module.exports = (env, { mode = 'development' }) => {
       },
     },
 
-    plugins: [new webpack.IgnorePlugin(/^pg-native$/)],
+    plugins: [
+      new webpack.IgnorePlugin(/^pg-native$/),
+      // new HtmlWebPackPlugin({
+      //   template: './src/public/index.html',
+      //   filename: './public/index.html',
+      //   excludeChunks: ['collection'],
+      // }),
+    ],
   };
 };

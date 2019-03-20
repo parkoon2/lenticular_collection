@@ -10,10 +10,12 @@ export default {
         client
           .query(text, params)
           .then(res => {
+            console.log(res);
             client.release();
             resolve(res);
           })
           .catch(err => {
+            console.log(err);
             client.release();
             reject(err);
           });
