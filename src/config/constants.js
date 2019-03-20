@@ -17,10 +17,10 @@ const devConfig = {
 const prodConfig = {
   MONGO_URL: 'mongodb://localhost/parkoon-prod',
   PG: {
-    user: 'me',
-    host: 'localhost',
-    database: 'api',
-    password: 'password',
+    user: 'genie',
+    host: '106.240.247.42',
+    database: 'wgcpdb',
+    password: 'genie01',
     port: 5432,
   },
 };
