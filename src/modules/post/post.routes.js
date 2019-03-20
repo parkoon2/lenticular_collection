@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import { checkToken } from 'Modules/auth/auth.token';
+import { verifyToken } from 'Config/auth';
 import * as postController from './post.controller';
 
 const routes = new Router();
 
-routes.get('/list', /*checkToken,*/ postController.list);
+routes.get('/list', verifyToken, postController.list);
 
 export default routes;

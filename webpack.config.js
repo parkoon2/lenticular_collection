@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = (env, { mode = 'development' }) => {
   return {
@@ -29,5 +30,7 @@ module.exports = (env, { mode = 'development' }) => {
         Modules: path.resolve(__dirname, 'src/modules/'),
       },
     },
+
+    plugins: [new webpack.IgnorePlugin(/^pg-native$/)],
   };
 };
